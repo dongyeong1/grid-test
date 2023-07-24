@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.color1 {
+    background-color: red;
+}
+
+.color2 {
+    background-color: black;
+}
+.color3 {
+    background-color: brown;
+}
+
+.color4 {
+    background-color: green;
+}
+
+.color5 {
+    background-color: hotpink;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    /* fr은 전체 화면에 대해 비율설정됨 */
+    /* grid-auto-rows: 한개만지정해주면 전체다 자동으로 설정 minmax 사용해서 컨텐츠 살리기*/
+    grid-template-rows: 100px 200px repeat(2, 50px);
+    grid-gap: 10px;
+    /* gutter */
+}
+
+.item2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
